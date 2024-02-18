@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Dashboard\PostController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('post', App\Http\Controllers\Dashboard\PostController::class);
